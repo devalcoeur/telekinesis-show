@@ -228,6 +228,32 @@ body>header,body>section,body>footer{position:relative;z-index:1}
 @media(max-width:700px){.world-v11-layer{inset:-8% -42%}.world-v11-base{background-position:58% center;filter:saturate(1.24) contrast(1.08) brightness(1.03)}.world-v11-energy{animation:none;opacity:0}.world-v11-vignette{background:rgba(2,6,18,.44)}}
 @media(prefers-reduced-motion:reduce){.world-v11-aurora,.world-v11-fog,.world-v11-energy{animation:none!important}.world-v11-energy{opacity:0!important}}
 
+
+/* FINAL EDITION — approved audience symbol, television episode and cinematic epilogue */
+.icon-audience{height:39px;display:flex;align-items:center;margin-bottom:12px}
+.icon-audience img{display:block;width:43px;height:37px;filter:drop-shadow(0 0 6px rgba(76,197,255,.18))}
+.show-video-block--feature{margin-top:62px}
+.show-video-block--feature .video-box{aspect-ratio:16/9;max-width:900px;margin:0 auto;box-shadow:0 0 0 1px rgba(105,220,255,.34),0 0 40px rgba(64,158,255,.28),0 0 90px rgba(96,76,255,.10)}
+.show-video-block--feature video{object-fit:contain;background:#02040a}
+.manifesto-section{padding:84px 0 96px;overflow:hidden}
+.manifesto-panel{max-width:940px;margin:0 auto;text-align:center;position:relative;isolation:isolate;overflow:hidden;padding:clamp(34px,6vw,76px) clamp(22px,5vw,64px);border-radius:26px;border:1px solid rgba(120,212,255,.60);background:radial-gradient(ellipse at 50% 100%,rgba(46,91,178,.30),transparent 72%),linear-gradient(155deg,rgba(4,14,35,.88),rgba(7,15,35,.78) 54%,rgba(13,12,39,.87));box-shadow:0 0 0 1px rgba(176,227,255,.11),0 0 50px rgba(33,130,249,.25),0 20px 72px rgba(0,0,0,.38);backdrop-filter:blur(15px)}
+.manifesto-panel::before{content:"";position:absolute;inset:-55%;pointer-events:none;z-index:-1;background:conic-gradient(from 120deg at 50% 50%,transparent 0deg,rgba(57,166,255,.15) 85deg,transparent 138deg,rgba(137,88,255,.17) 230deg,transparent 300deg);animation:manifestoEnergy 24s ease-in-out infinite alternate}
+.manifesto-kicker{font-size:.73rem;letter-spacing:.38em;color:#88ddff;text-transform:uppercase;margin-bottom:20px;text-shadow:0 0 16px rgba(106,223,255,.6)}
+.manifesto-panel h2{font-size:clamp(1.5rem,3.6vw,2.5rem);color:#eaf7ff;margin-bottom:33px}
+.manifesto-statement{font-size:clamp(1.01rem,1.65vw,1.22rem);line-height:1.9;color:#e9f6ff;max-width:750px;margin:0 auto}
+.manifesto-statement-secondary{color:#b7dafa;margin-top:8px}
+.manifesto-divider{height:1px;width:min(240px,66%);margin:34px auto;background:linear-gradient(90deg,transparent,#8ce2ff,transparent);box-shadow:0 0 16px rgba(111,222,255,.75)}
+.manifesto-invite{color:#99dfff;font-family:Cinzel,serif;font-size:clamp(1.15rem,2.6vw,1.55rem);margin-bottom:7px;text-shadow:0 0 15px rgba(70,180,255,.3)}
+.manifesto-caption{color:#d1e7fa;max-width:660px;margin:0 auto 40px;line-height:1.8}
+.manifesto-quote{margin:18px auto 0;max-width:730px}
+.manifesto-quote blockquote{font-family:Cinzel,Georgia,serif;font-weight:700;font-size:clamp(2.15rem,5.7vw,4.5rem);line-height:1.2;text-wrap:balance;color:#f5fbff;text-shadow:0 0 12px rgba(128,221,255,.65),0 0 33px rgba(29,148,255,.43);animation:manifestoQuoteGlow 9s ease-in-out infinite alternate}
+.manifesto-quote blockquote span{color:#88dbff}
+.manifesto-quote figcaption{font-size:clamp(.95rem,1.5vw,1.14rem);letter-spacing:.13em;color:#cce9ff;margin-top:23px}
+@keyframes manifestoEnergy{from{opacity:.62;transform:rotate(-5deg) scale(.96)}to{opacity:.98;transform:rotate(6deg) scale(1.06)}}
+@keyframes manifestoQuoteGlow{from{text-shadow:0 0 12px rgba(128,221,255,.45),0 0 26px rgba(29,148,255,.26)}to{text-shadow:0 0 22px rgba(128,221,255,.83),0 0 48px rgba(29,148,255,.62)}}
+@media(max-width:600px){.show-video-block--feature{margin-top:45px}.manifesto-section{padding:52px 0 64px}.manifesto-panel{border-radius:19px}.manifesto-kicker{letter-spacing:.22em}.manifesto-quote figcaption{letter-spacing:.07em}}
+@media(prefers-reduced-motion:reduce){.manifesto-panel::before,.manifesto-quote blockquote{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -286,6 +312,13 @@ body>header,body>section,body>footer{position:relative;z-index:1}
         <div class="video-placeholder"><div class="play"></div>Загрузка телевизионного фрагмента</div>
       </div>
     </div>
+    <div class="show-video-block show-video-block--tv show-video-block--feature">
+      <h3 class="show-video-title">Необъяснимое в объективе камеры</h3>
+      <p class="show-video-description">Движение предметов без прикосновения, необычная деформация металла и загадочные явления, запечатлённые телевизионными камерами.</p>
+      <div class="video-box">
+        <video id="tvBroadcastVideo" src="TV_BROADCAST_WEB.mp4" poster="TELEKINESIS_V11_ASSETS/tv-broadcast-poster.jpg" controls playsinline preload="metadata" aria-label="Необъяснимое в объективе камеры — телевизионный сюжет"></video>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -298,7 +331,7 @@ body>header,body>section,body>footer{position:relative;z-index:1}
       <div class="card"><div class="icon">✧</div><h3>Настоящая энергия</h3><p>Гости по-настоящему ощущают невидимую энергию. Это не иллюзия, это нужно испытать самому.</p></div>
       <div class="card"><div class="icon">⚒</div><h3>Металл как бумага</h3><p>В руках Кристиана железо становится мягким, как бумага: он легко рвёт и ломает его на глазах у зрителей.</p></div>
       <div class="card"><div class="icon">⚔</div><h3>Рыцарь света</h3><p>Эффектный образ, синее сияние меча, атмосфера тайны. Зрелище, которое хочется снимать на телефон.</p></div>
-      <div class="card"><div class="icon">✋</div><h3>Участие зала</h3><p>Зрители не просто смотрят: они участвуют, проверяют и сами ощущают энергию.</p></div>
+      <div class="card"><div class="icon icon-audience"><img src="TELEKINESIS_V11_ASSETS/audience-icon.svg" alt="" width="42" height="34" loading="lazy"></div><h3>Участие зала</h3><p>Зрители не просто смотрят: они участвуют, проверяют и сами ощущают энергию.</p></div>
     </div>
   </div>
 </section>
@@ -357,6 +390,24 @@ body>header,body>section,body>footer{position:relative;z-index:1}
       <h3>Ведущий + Телекинез Шоу</h3>
       <p>Кристиан ведёт ваше мероприятие на русском, французском и английском языках, а в кульминации превращает его в настоящее шоу.</p>
       <a class="btn btn-main" href="https://devalcoeur.github.io/premium-media-kit">Медиакит ведущего</a>
+    </div>
+  </div>
+</section>
+
+<section id="manifesto" class="manifesto-section" aria-labelledby="manifesto-title">
+  <div class="wrap">
+    <div class="manifesto-panel">
+      <div class="manifesto-kicker">TELEKINESIS SHOW</div>
+      <h2 id="manifesto-title">За гранью привычного</h2>
+      <p class="manifesto-statement">Никаких фокусов. Никаких привычных трюков. Никакой ловкости рук.</p>
+      <p class="manifesto-statement manifesto-statement-secondary">Только происходящее здесь и сейчас — прямо перед вашими глазами.</p>
+      <div class="manifesto-divider" aria-hidden="true"></div>
+      <p class="manifesto-invite">А если вы всё ещё сомневаетесь…</p>
+      <p class="manifesto-caption">Приходите. Увидьте своими глазами. И сделайте собственный вывод.</p>
+      <figure class="manifesto-quote">
+        <blockquote>«Невозможное <span>возможно</span>»</blockquote>
+        <figcaption>Кристиан Девалкьер</figcaption>
+      </figure>
     </div>
   </div>
 </section>
